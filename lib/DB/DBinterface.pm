@@ -26,7 +26,7 @@ our @EXPORT = qw(
 	
 );
 
-our $VERSION = '0.95';
+our $VERSION = '0.96';
 
 sub new
 {
@@ -344,7 +344,6 @@ sub DBselect
 	$db = $self->{'DATABASE'} if(defined($self->{'DATABASE'})) ;
         $db = 'mysql' unless(defined($self->{'DATABASE'})) ;
 	my $host = $self->{'DBHOST'};
-	print "DBI:$self->{'DBTYPE'}:database=$db;host=$host\n";
 	my $dbi_driver = $self->{'DBTYPE'};
         my $dbh = DBI->connect("DBI:$dbi_driver:database=$db;host=$host",$login_db, $password_db,{'RaiseError' => 0, AutoCommit => 1}) or $ctrlerr=1;
 	if (defined($ctrlerr) && $ctrlerr == 1)
