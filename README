@@ -1,0 +1,40 @@
+DB-DBinterface version 0.95
+===========================
+
+DB::DBinterface is an object oriented modules wich provide a really simply databse interface.
+You can make all your SQL transaction with 2 methods : DBselect (for ``SELECT-like'' request) and DBupdate (for all but ``SELECT-like'' request) plus the constructor. You can use this module with all database wich are supported by the DBI modules.
+
+To properly install DB::DBinterface you may have installed DBI and related DBD::* modules.
+
+INSTALLATION
+
+To install this module type the following:
+
+Best :
+
+% perl -MCPAN -e 'install DB::DBinterface'
+
+Standart :
+
+   perl Makefile.PL
+   make
+   make test
+   make install
+
+DEPENDENCIES
+
+This module requires these other modules and libraries:
+
+	DBI
+	and all DBD::* modules required by your database
+
+COPYRIGHT AND LICENCE
+
+
+Copyright (C) 2004 by DUPUIS Arnaud <a.dupuis@infinityperl.org>
+
+This library is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself, either Perl version 5.8.3 or,
+at your option, any later version of Perl 5 you may have available.
+
+
